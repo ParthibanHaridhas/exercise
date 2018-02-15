@@ -1,0 +1,42 @@
+<!--
+<html ng-app>
+<head > 
+	<title>How AngularJS Works?</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"> </script>
+	<link rel="stylesheet" type="text/css" href="mystylesheet.css">
+</head>
+<body ng-init="noOfBooks=30"> 
+	
+Number of Books: <input ng-model="noOfBooks">
+	<p>Welcome to our BookStore, we have collection of {{noOfBooks+ ' Million'}} books.</p>
+	<date-picker> </date-picker>
+</body>
+</html>
+-->
+
+<html ng-app="myApp">
+    <head>
+        <title>Welcome to BooK Store</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/app.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        
+        <div id="headerWrapper" ng-controller="HeaderCtrl">
+            <span class="logo pull-left">{{appDetails.title}}</span>
+            <span class="tagline pull-left">{{appDetails.tagline}}</span>
+            <div class="nav-wrapper pull-left">
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="#/books">Books</a></li>
+                    <li><a href="#/kart">Kart</a></li>
+                </ul>
+            </div>
+        </div>
+		
+		<div ng-view></div>
+		
+    </body>
+</html>
